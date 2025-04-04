@@ -8,6 +8,7 @@ const driver = neo4j.driver(
   Neo4jSettings.connectionString,
   neo4j.auth.basic(Neo4jSettings.username, Neo4jSettings.password),
 );
+
 const server = new McpServer({
   name: "Neo4J - MCP",
   version: "1.0.0",
