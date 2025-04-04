@@ -2,12 +2,19 @@ import neo4j from "neo4j-driver";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { Neo4jSettings } from "./config.ts";
+import process from "node:process";
+
+const config = {
+  uri: process.env.NEO4J_URI,
+  username: process.env.NEO4J_USERNAME,
+  password: process.env.NEO4J_PASSWORD,
+};
 
 const driver = neo4j.driver(
-  Neo4jSettings.connectionString,
-  neo4j.auth.basic(Neo4jSettings.username, Neo4jSettings.password),
+  config.uri,
+  neo4j.auth.basic(config.username, config.password),
 );
+
 
 const server = new McpServer({
   name: "Neo4J - MCP",
