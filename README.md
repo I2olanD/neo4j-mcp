@@ -6,11 +6,11 @@
 - [Deno](https://deno.com/)
 - [MCP Server](https://github.com/modelcontextprotocol/typescript-sdk)
 
-# For Debugging
+## For Debugging
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 
-# Install deno
+### Install deno
 `brew install deno`.
 
-# Run
+### Run
 `deno run ./main.ts`
