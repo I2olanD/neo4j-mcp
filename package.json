@@ -1,0 +1,10 @@
+{
+  "name": "neo4j-mcp",
+  "type": "module",
+  "description": "Boilerplate repo to get started with MCP and Neo4j",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "neo4j-driver": "^4.0.2",
+    "zod": "^3.24.2"
+  }
+}
